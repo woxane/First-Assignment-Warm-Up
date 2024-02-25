@@ -25,20 +25,15 @@ public class Exercises1 {
     }
 
 
-    /*
-    implement a function that returns a triangle for example:
-    row = 5
-
-    *
-    **
-    ***
-    ****
-    *****
-
-     */
     public char[][] generateTriangle(int rows) {
-        // TODO
-        return null;
+        char[][] triangle = new char[rows][];
+        for (int i = 0; i < rows; i++) {
+            triangle[i] = new char[i + 1];
+            for (int j = 0; j <= i; j++) {
+                triangle[i][j] = '*';
+            }
+        }
+        return triangle;
     }
 
 
@@ -49,6 +44,15 @@ public class Exercises1 {
         System.out.println("Factorial of 5: " + exercises.factorial(5));
         // Test fibonacci
         System.out.println("Fibonacci of 7: " + exercises.fibonacci(7));
+
+        // Test generateTriangle
+        char[][] triangle = exercises.generateTriangle(10);
+        for (int i = 0; i < triangle.length; i++) {
+            for (int j = 0; j < triangle[i].length; j++) {
+                System.out.print(triangle[i][j]);
+            }
+            System.out.println();
+        }
 
     }
 
