@@ -1,10 +1,10 @@
 public class Exercises1 {
-    /*
-    implement a function that returns factorial of given n
-     */
     public long factorial(int n) {
-        // TODO
-        return 0;
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
     }
 
 
@@ -36,7 +36,11 @@ public class Exercises1 {
 
 
     public static void main(String[] args) {
-        // test your code here!
+        Exercises1 exercises = new Exercises1();
+
+        // Test factorial
+        System.out.println("Factorial of 5: " + exercises.factorial(5));
+
     }
 
 }
